@@ -1,0 +1,263 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --orange: #ff9700;
+  --yellow: #ffe900;
+  --neon-green: #05e400;
+  --acid-lime: #bdff00;
+  --text-grey: #d3d3d3;
+}
+
+html {
+  background: #010003;
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: white;
+}
+
+body {
+  max-width: 1000px;
+  margin: auto;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+button {
+  background: rgb(5, 228, 0);
+  background: linear-gradient(
+    90deg,
+    rgba(5, 228, 0, 1) 0%,
+    rgba(189, 255, 0, 1) 56%,
+    rgba(5, 228, 0, 1) 88%
+  );
+  color: black;
+  font-family: inherit;
+  font-weight: bold;
+  border: 0;
+  border-radius: 8px;
+  padding: 8px 15px;
+  transition: all 1s ease-out;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+button:hover {
+  background: rgb(5, 228, 0);
+  background: linear-gradient(
+    90deg,
+    rgba(5, 228, 0, 1) 0%,
+    rgba(189, 255, 0, 1) 21%,
+    rgba(5, 228, 0, 1) 88%
+  );
+}
+
+button.large {
+  font-size: 22px;
+  padding: 15px 30px;
+}
+
+.gradient {
+  background-image: linear-gradient(to right, var(--orange), var(--yellow));
+  color: black;
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  /* Adicionado: */
+  -webkit-text-fill-color: transparent;
+}
+
+section {
+  margin: 100px 0;
+}
+
+header {
+  display: flex;
+  height: 100vh;
+}
+
+header .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 70%;
+  gap: 30px;
+}
+
+header img {
+  width: 300px;
+  object-fit: contain;
+  display: block;
+  margin: auto;
+  transform: rotate(20deg);
+}
+
+header h1 {
+  font-size: 80px;
+  max-width: 70%;
+}
+
+header h5 {
+  font-size: 30px;
+}
+
+header p {
+  width: 80%;
+}
+
+.flex-container {
+  display: flex;
+}
+
+.gap-50 {
+  gap: 50px;
+}
+
+.vertical-center {
+  align-items: center;
+}
+
+.horizontal-center {
+  justify-content: center;
+}
+
+.center {
+  text-align: center;
+}
+
+.secondary-color {
+  color: var(--text-grey);
+}
+
+.title {
+  margin: 40px 0;
+}
+
+.subtitle {
+  font-size: 26px;
+}
+
+.sumario {
+  ol {
+    border: 1px solid orange;
+    border-radius: 8px;
+    padding: 20px;
+    width: fit-content;
+    height: fit-content;
+  }
+
+  li {
+    margin-left: 15px;
+  }
+
+  img {
+    height: 400px;
+    border-radius: 8px;
+  }
+}
+
+.offer-container {
+  display: flex;
+  gap: 20px;
+}
+
+.offer-card {
+  background: white;
+  border-radius: 8px;
+  padding: 35px;
+  color: black;
+  position: relative;
+  width: 50%;
+
+  ul {
+    margin: 15px;
+    padding: 0;
+  }
+
+  li {
+    list-style: none;
+    margin: 0;
+  }
+
+  h3 {
+    margin: 15px 0;
+  }
+
+  .price {
+    margin: 15px auto;
+    font-size: 50px;
+  }
+
+  .price-from {
+    font-weight: bold;
+    text-decoration: line-through;
+  }
+
+  .price-parcelado {
+    color: rgb(138, 138, 138);
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+
+  .tag {
+    background-image: linear-gradient(to right, var(--orange), var(--yellow));
+    border-radius: 8px;
+    padding: 8px 15px;
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+}
+
+@media screen and (max-width: 720px) {
+  body {
+    padding: 20px;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column-reverse;
+    height: unset;
+
+    img {
+      width: 200px;
+      margin: auto 0 auto auto;
+    }
+
+    h1 {
+      max-width: unset;
+      font-size: 50px;
+    }
+
+    .container {
+      width: 100%;
+    }
+  }
+
+  .sumario {
+    .flex-container {
+      flex-direction: column;
+    }
+
+    .column-reverse-sm {
+      flex-direction: column-reverse;
+    }
+
+    .title {
+      text-align: center;
+    }
+  }
+
+  .offer-container {
+    .offer-card {
+      width: 100%;
+    }
+  }
+}
